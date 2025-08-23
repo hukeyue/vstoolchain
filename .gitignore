@@ -1,3 +1,6 @@
 /DIA SDK
 /VC
 /Windows Kits
+/sys32
+/sys64
+/sysarm64
