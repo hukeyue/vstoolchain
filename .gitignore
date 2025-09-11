@@ -4,3 +4,5 @@
 /sys32
 /sys64
 /sysarm64
+.DS_Store
+*.zip
