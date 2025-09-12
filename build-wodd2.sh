@@ -2,7 +2,7 @@
 
 set -x
 set -e
-cd ~/wodd_convey
+cd ~/wodd_convey2
 rm -rf build
 mkdir -p build
 cd build
