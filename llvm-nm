@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec ~/clang+llvm-22.1.0-arm64-apple-darwin20.1.0/bin/llvm-nm "$@"

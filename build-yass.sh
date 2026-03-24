@@ -30,11 +30,13 @@ cmake -G Ninja \
    -DGUI=on -DBUILD_TESTS=on -DBUILD_BENCHMARKS=on \
    -DENABLE_LTO=on -DENABLE_LLD=on -DUSE_LIBCXX=on \
    -DMSVC_CRT_LINKAGE=dynamic \
+   -DUSE_CURL=off \
    -DCMAKE_BUILD_TYPE=Release \
    -DCMAKE_TOOLCHAIN_FILE=$HOME/yass-develop/cmake/platforms/WinMsvc.cmake \
    -DHOST_ARCH=$WITH_CPU \
    -DCMAKE_RC_COMPILER=$HOME/vstoolchain/llvm-rc \
    -DCMAKE_MT=$HOME/vstoolchain/llvm-mt \
+   -DCMAKE_NM=$HOME/vstoolchain/llvm-nm \
    -DLLVM_NATIVE_TOOLCHAIN=$LLVM_PATH \
    "-DMSVC_BASE=$HOME/vstoolchain/VC/Tools/MSVC/14.29.30133" \
    "-DWINSDK_BASE=$HOME/vstoolchain/Windows Kits/10" \
