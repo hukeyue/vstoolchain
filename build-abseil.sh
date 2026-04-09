@@ -18,7 +18,7 @@ case "$WITH_CPU" in
     ;;
 esac
 
-cd ~/yass-develop
+cd ~/abseil-cpp
 
 BUILD_DIR=build-msvc-$WITH_CPU-dynamic
 rm -rf $BUILD_DIR
@@ -28,14 +28,12 @@ cd $BUILD_DIR
 LLVM_PATH=$HOME/yass-develop/third_party/llvm-build/Release+Asserts
 LLVM_PATH=$HOME/clang+llvm-22.1.3-arm64-apple-darwin20.1.0
 cmake -G Ninja \
-   -DGUI=on -DBUILD_TESTS=on -DBUILD_BENCHMARKS=on \
-   -DENABLE_LTO=off -DBUILD_SHARED_LIBS=on -DENABLE_LLD=on -DUSE_LIBCXX=on -DUSE_TBBMALLOC=on \
-   -DUSE_CARES=on -DUSE_NGHTTP2=off \
-   -DUSE_ZLIB=on \
-   -DMSVC_CRT_LINKAGE=dynamic \
-   -DUSE_CURL=off \
+   -DCMAKE_CXX_STANDARD=20 -DCMAKE_CXX_STANDARD_REQUIRED=on \
+   -DABSL_ENABLE_INSTALL=off \
+   -DBUILD_SHARED_LIBS=on \
+   -DABSL_MSVC_STATIC_RUNTIME=off \
    -DCMAKE_BUILD_TYPE=Release \
-   -DCMAKE_TOOLCHAIN_FILE=$HOME/yass-develop/cmake/platforms/WinMsvc.cmake \
+   -DCMAKE_TOOLCHAIN_FILE=$HOME/vstoolchain/cmake/platforms/WinMsvc.cmake \
    -DHOST_ARCH=$WITH_CPU \
    -DCMAKE_RC_COMPILER=$HOME/vstoolchain/llvm-rc \
    -DCMAKE_MT=$HOME/vstoolchain/llvm-mt \
