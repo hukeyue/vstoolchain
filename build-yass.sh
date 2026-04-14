@@ -30,7 +30,7 @@ LLVM_PATH=$HOME/clang+llvm-22.1.3-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DGUI=on -DBUILD_TESTS=on -DBUILD_BENCHMARKS=on \
    -DENABLE_LTO=off -DBUILD_SHARED_LIBS=on -DENABLE_LLD=on -DUSE_LIBCXX=on -DUSE_TBBMALLOC=on \
-   -DUSE_CARES=on -DUSE_NGHTTP2=off \
+   -DUSE_CARES=off -DUSE_NGHTTP2=off \
    -DUSE_ZLIB=on \
    -DMSVC_CRT_LINKAGE=dynamic \
    -DUSE_CURL=off \
@@ -42,7 +42,7 @@ cmake -G Ninja \
    -DCMAKE_NM=$HOME/vstoolchain/llvm-nm \
    -DLLVM_NATIVE_TOOLCHAIN=$LLVM_PATH \
    "-DMSVC_BASE=$HOME/vstoolchain/VC/Tools/MSVC/14.50.35717" \
-   "-DWINSDK_BASE=$HOME/vstoolchain/Windows Kits/10" \
+   "-DWINSDK_BASE=$HOME/vstoolchain/Windows_Kits/10" \
    -DWINSDK_VER=10.0.26100.0 \
    ..
 

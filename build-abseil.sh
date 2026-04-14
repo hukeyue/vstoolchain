@@ -40,7 +40,7 @@ cmake -G Ninja \
    -DCMAKE_NM=$HOME/vstoolchain/llvm-nm \
    -DLLVM_NATIVE_TOOLCHAIN=$LLVM_PATH \
    "-DMSVC_BASE=$HOME/vstoolchain/VC/Tools/MSVC/14.50.35717" \
-   "-DWINSDK_BASE=$HOME/vstoolchain/Windows Kits/10" \
+   "-DWINSDK_BASE=$HOME/vstoolchain/Windows_Kits/10" \
    -DWINSDK_VER=10.0.26100.0 \
    ..
 
