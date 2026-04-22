@@ -26,7 +26,7 @@ mkdir $BUILD_DIR
 cd $BUILD_DIR
 
 LLVM_PATH=$HOME/yass-develop/third_party/llvm-build/Release+Asserts
-LLVM_PATH=$HOME/clang+llvm-22.1.3-arm64-apple-darwin20.1.0
+LLVM_PATH=$HOME/clang+llvm-22.1.4-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DCMAKE_CXX_STANDARD=20 -DCMAKE_CXX_STANDARD_REQUIRED=on \
    -DABSL_ENABLE_INSTALL=off \
