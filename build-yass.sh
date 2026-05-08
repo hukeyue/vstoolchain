@@ -30,7 +30,7 @@ LLVM_PATH=$HOME/clang+llvm-22.1.4-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DGUI=on -DBUILD_DYLIB=on -DBUILD_TESTS=on -DBUILD_BENCHMARKS=on \
    -DENABLE_LTO=off -DBUILD_SHARED_LIBS=on -DENABLE_LLD=on -DUSE_LIBCXX=on \
-   -DUSE_CARES=off -DUSE_NGHTTP2=off -DUSE_MIMALLOC=on \
+   -DUSE_CARES=off -DUSE_NGHTTP2=off -DUSE_MIMALLOC=off -DUSE_TBB=on \
    -DUSE_ZLIB=on \
    -DMSVC_CRT_LINKAGE=dynamic \
    -DUSE_CURL=off \
