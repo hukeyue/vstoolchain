@@ -30,10 +30,10 @@ LLVM_PATH=$HOME/clang+llvm-22.1.6-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DGUI=on -DBUILD_DYLIB=on -DBUILD_TESTS=on -DBUILD_BENCHMARKS=on \
    -DENABLE_LTO=off -DBUILD_SHARED_LIBS=on -DENABLE_LLD=on -DUSE_LIBCXX=on \
+   -DGOOGLEURL_BUILD_SHARED_LIBS=off -DQUICHE_BUILD_SHARED_LIBS=off \
    -DUSE_CARES=off -DUSE_NGHTTP2=off -DUSE_MIMALLOC=off -DUSE_TBB=on \
    -DUSE_ZLIB=on \
    -DMSVC_CRT_LINKAGE=dynamic \
-   -DUSE_CURL=off \
    -DCMAKE_BUILD_TYPE=Release \
    -DCMAKE_TOOLCHAIN_FILE=$HOME/yass-develop/cmake/platforms/WinMsvc.cmake \
    -DHOST_ARCH=$WITH_CPU \
