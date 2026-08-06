@@ -17,7 +17,7 @@ case "$WITH_CPU" in
 esac
 
 BUILD_DIR="$HOME/llvm-msvc-build-$WITH_CPU"
-#rm -rf "$BUILD_DIR"
+rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
@@ -25,11 +25,10 @@ LLVM_PATH=$HOME/clang+llvm-22.1.8-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_ASSERTIONS=on \
    -DLLVM_DEFAULT_TARGET_TRIPLE="$WITH_CPU-windows-msvc" \
-   -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
    -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-   -DLLVM_ENABLE_PROJECTS="example" \
+   -DLLVM_ENABLE_PROJECTS="" \
    -DLLVM_ENABLE_RUNTIMES="" \
-   -DMSVC_CRT_LINKAGE=dynamic \
+   -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded \
    -DCMAKE_TOOLCHAIN_FILE=$HOME/vstoolchain/WinMsvc.cmake \
    -DHOST_ARCH=$WITH_CPU \
    -DCMAKE_RC_COMPILER=$HOME/vstoolchain/llvm-rc \
