@@ -21,7 +21,7 @@ BUILD_DIR="$HOME/llvm-msvc-build-$WITH_CPU"
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
-LLVM_PATH=$HOME/clang+llvm-22.1.6-arm64-apple-darwin20.1.0
+LLVM_PATH=$HOME/clang+llvm-22.1.8-arm64-apple-darwin20.1.0
 cmake -G Ninja \
    -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_ASSERTIONS=on \
    -DLLVM_DEFAULT_TARGET_TRIPLE="$WITH_CPU-windows-msvc" \
