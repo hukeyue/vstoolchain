@@ -18,7 +18,7 @@ case "$WITH_CPU" in
     ;;
 esac
 
-cd ~/yass
+cd ~/yass-develop
 
 BUILD_DIR=build-msvc-$WITH_CPU-dynamic
 rm -rf $BUILD_DIR
